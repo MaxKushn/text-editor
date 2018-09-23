@@ -1,3 +1,4 @@
-<div class="file">
+<app-control-panel [synonyms]="synonyms" id="appControlPanel" *ngIf="selectedWord !== ''"></app-control-panel>
+<div class="file" id="mockedText" contentEditable="true">
   {{text}}
 </div>

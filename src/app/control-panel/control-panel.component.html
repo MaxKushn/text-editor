@@ -1,5 +1,8 @@
-<div class="format-actions">
-  <button class="format-action" type="button"><b>B</b></button>
-  <button class="format-action" type="button"><i>I</i></button>
-  <button class="format-action" type="button"><u>U</u></button>
+<div class="format-actions" id="formatActions">
+  <div class="synonyms" id="synonyms">
+    <button *ngFor="let syn of synonyms" (click)="execCommand('insertText', syn.word)">{{syn.word}}</button>
+  </div>
+  <button (click)="execCommand('bold')" type="button"><b>B</b></button>
+  <button (click)="execCommand('italic')" type="button"><i>I</i></button>
+  <button (click)="execCommand('underline')" type="button"><u>U</u></button>
 </div>

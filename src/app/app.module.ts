@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { TextService } from './text-service/text.service';
 import { WordService } from './word-service/word.service';
+import { StorageService } from './storage-service/storage.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -21,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     FormsModule
   ],
-  providers: [TextService, WordService],
+  providers: [TextService, WordService, StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
