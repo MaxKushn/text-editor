@@ -6,6 +6,8 @@ import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { TextService } from './text-service/text.service';
+import { WordService } from './word-service/word.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { TextService } from './text-service/text.service';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule
   ],
-  providers: [TextService],
+  providers: [TextService, WordService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
